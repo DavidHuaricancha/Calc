@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2e3dbe96-48e7-4211-89a3-1deb8d14f2a0" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myFlattenPackages" value="true" />
+    <option name="myAutoScrollToSource" value="true" />
+    <option name="myAutoScrollFromSource" value="true" />
+    <option name="myElementSize" value="182" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZDJQtLcSGGpZ0bW2KaTl3T2pyq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="example.calculer.main" />
+      <module name="Example" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="example.calculer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2e3dbe96-48e7-4211-89a3-1deb8d14f2a0" name="Default Changelist" comment="" />
+      <created>1584367718269</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584367718269</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="510" y="243" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584367748001">
+      <screen x="0" y="0" width="1600" height="872" />
+    </state>
+    <state x="510" y="243" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.872@0.0.1600.872" timestamp="1584367748001" />
+    <state x="609" y="157" key="#com.intellij.ide.util.MemberChooser" timestamp="1584377713412">
+      <screen x="0" y="0" width="1600" height="872" />
+    </state>
+    <state x="609" y="157" key="#com.intellij.ide.util.MemberChooser/0.0.1600.872@0.0.1600.872" timestamp="1584377713412" />
+    <state x="534" y="187" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584391247683">
+      <screen x="0" y="0" width="1600" height="872" />
+    </state>
+    <state x="534" y="187" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.872@0.0.1600.872" timestamp="1584391247683" />
+    <state x="584" y="196" key="FileChooserDialogImpl" timestamp="1584397639563">
+      <screen x="0" y="0" width="1600" height="872" />
+    </state>
+    <state x="584" y="196" key="FileChooserDialogImpl/0.0.1600.872@0.0.1600.872" timestamp="1584397639563" />
+    <state width="1324" height="237" key="GridCell.Tab.0.bottom" timestamp="1584502415132">
+      <screen x="0" y="0" width="1366" height="740" />
+    </state>
+    <state width="1324" height="237" key="GridCell.Tab.0.bottom/0.0.1366.740@0.0.1366.740" timestamp="1584502415132" />
+    <state width="1558" height="221" key="GridCell.Tab.0.bottom/0.0.1600.872@0.0.1600.872" timestamp="1584405466705" />
+    <state width="1324" height="237" key="GridCell.Tab.0.center" timestamp="1584502415129">
+      <screen x="0" y="0" width="1366" height="740" />
+    </state>
+    <state width="1324" height="237" key="GridCell.Tab.0.center/0.0.1366.740@0.0.1366.740" timestamp="1584502415129" />
+    <state width="1558" height="221" key="GridCell.Tab.0.center/0.0.1600.872@0.0.1600.872" timestamp="1584405466704" />
+    <state width="1324" height="237" key="GridCell.Tab.0.left" timestamp="1584502415129">
+      <screen x="0" y="0" width="1366" height="740" />
+    </state>
+    <state width="1324" height="237" key="GridCell.Tab.0.left/0.0.1366.740@0.0.1366.740" timestamp="1584502415129" />
+    <state width="1558" height="221" key="GridCell.Tab.0.left/0.0.1600.872@0.0.1600.872" timestamp="1584405466704" />
+    <state width="1324" height="237" key="GridCell.Tab.0.right" timestamp="1584502415131">
+      <screen x="0" y="0" width="1366" height="740" />
+    </state>
+    <state width="1324" height="237" key="GridCell.Tab.0.right/0.0.1366.740@0.0.1366.740" timestamp="1584502415131" />
+    <state width="1558" height="221" key="GridCell.Tab.0.right/0.0.1600.872@0.0.1600.872" timestamp="1584405466705" />
+    <state width="1324" height="221" key="GridCell.Tab.1.bottom" timestamp="1584500616315">
+      <screen x="0" y="0" width="1366" height="740" />
+    </state>
+    <state width="1324" height="221" key="GridCell.Tab.1.bottom/0.0.1366.740@0.0.1366.740" timestamp="1584500616315" />
+    <state width="1324" height="221" key="GridCell.Tab.1.center" timestamp="1584500616315">
+      <screen x="0" y="0" width="1366" height="740" />
+    </state>
+    <state width="1324" height="221" key="GridCell.Tab.1.center/0.0.1366.740@0.0.1366.740" timestamp="1584500616315" />
+    <state width="1324" height="221" key="GridCell.Tab.1.left" timestamp="1584500616314">
+      <screen x="0" y="0" width="1366" height="740" />
+    </state>
+    <state width="1324" height="221" key="GridCell.Tab.1.left/0.0.1366.740@0.0.1366.740" timestamp="1584500616314" />
+    <state width="1324" height="221" key="GridCell.Tab.1.right" timestamp="1584500616315">
+      <screen x="0" y="0" width="1366" height="740" />
+    </state>
+    <state width="1324" height="221" key="GridCell.Tab.1.right/0.0.1366.740@0.0.1366.740" timestamp="1584500616315" />
+    <state x="349" y="199" key="com.intellij.ide.util.TipDialog" timestamp="1584452803195">
+      <screen x="0" y="0" width="1366" height="740" />
+    </state>
+    <state x="349" y="199" key="com.intellij.ide.util.TipDialog/0.0.1366.740@0.0.1366.740" timestamp="1584452803195" />
+    <state x="477" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1584486154530">
+      <screen x="0" y="0" width="1366" height="740" />
+    </state>
+    <state x="477" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.740@0.0.1366.740" timestamp="1584486154530" />
+    <state x="559" y="130" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1600.872@0.0.1600.872" timestamp="1584371726043" />
+    <state x="346" y="61" width="672" height="678" key="search.everywhere.popup" timestamp="1584471913905">
+      <screen x="0" y="0" width="1366" height="740" />
+    </state>
+    <state x="346" y="61" width="672" height="678" key="search.everywhere.popup/0.0.1366.740@0.0.1366.740" timestamp="1584471913905" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Example$main.ic" NAME="main Coverage Results" MODIFIED="1584500630895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>example.calculer.*</FILTER>
+    </SUITE>
+  </component>
+</project>
