@@ -1,10 +1,6 @@
 package example.models;
 
-import java.math.BigDecimal;
-
 import static java.lang.Double.*;
-import static java.math.BigDecimal.*;
-import static java.lang.String.format;
 
 public class Calculer {
 
@@ -46,31 +42,82 @@ public class Calculer {
         return  calculer;
     }
 
-    public boolean ejecutar(){
-//        while (getScreen().contains(")")){
-//
-//        }
-        setResult(getScreen());
+    public void ejecutarChangeSign(){
+        Calculer cal = new Calculer();
+        cal.setScreen(getScreen());
+        cal.ejecutarEquation();
+        Double num = Double.valueOf(cal.getResult());
+        Double signoNegative;
+        signoNegative = num*-1;
+        setResult(String.valueOf(signoNegative));
+    }
 
-        if (getResult().contains("*")){
-            setResult(multiplication(getResult()));
-            System.out.println(getResult());
+    public void  ejecutarPercentage(String percentage){
+
+
+        Calculer cal = new Calculer();
+        cal.setScreen(getScreen());
+        cal.ejecutarEquation();
+        Double num=0D;
+
+        num = (Double.valueOf(cal.getResult())*Double.valueOf(percentage)/100);
+        setResult(String.valueOf(num));
+    }
+
+    public void ejecutarEquation(){
+        setResult(getScreen().replace("-","r"));
+
+        if(getResult().contains(")")){
+            setResult(parenthesis(getResult()));
         }
         if (getResult().contains("/")){
             setResult(division(getResult()));
-            System.out.println(getResult());
         }
-        if (getResult().contains("-")){
+        if (getResult().contains("*")){
+            setResult(multiplication(getResult()));
+        }
+        if (getResult().contains("r")){
             setResult(subtraction(getResult()));
-            System.out.println(getResult());
         }
         if (getResult().contains("+")){
             setResult(addition(getResult()));
-            System.out.println(getResult());
+        }
+    }
+
+    public static String ejecutarParenthesis(String operation){
+        operation = (operation.replace("-","r"));
+
+        if (operation.contains("/")){
+            operation =(division(operation));
+        }
+        if (operation.contains("*")){
+            operation = (multiplication(operation));
+        }
+        if (operation.contains("r")){
+            operation =(subtraction(operation));
+        }
+        if (operation.contains("+")){
+            operation =(addition(operation));
         }
 
+        return operation;
+    }
 
-        return true;
+    public static String parenthesis(String operation){
+        while (operation.contains(")")) {
+            String right = extractOperationRight(operation, ")");
+
+            String operationExtract = "";
+
+            operationExtract = obtenerEcuacion(operation);
+            String left = operation.substring(0,operation.length()-(operationExtract.length()+2+right.length()));
+
+            operation = ejecutarParenthesis(operationExtract);
+
+            operation = (left + operation + right);
+
+        }
+        return operation;
     }
 
     public static String  multiplication(String operation){
@@ -83,6 +130,14 @@ public class Calculer {
 
             fragmentedLeft = operation.substring(0, operation.indexOf("*") - left.length());
             fragmentedRight = operation.substring(operation.indexOf("*") + right.length() + 1);
+
+            if(left == ""){
+                left="0";
+            }
+
+            if(right == ""){
+                right="0";
+            }
 
             operation = (fragmentedLeft + (parseDouble(left) * parseDouble(right)) + fragmentedRight);
         }
@@ -100,6 +155,14 @@ public class Calculer {
             fragmentedLeft = operation.substring(0, operation.indexOf("/") - left.length());
             fragmentedRight = operation.substring(operation.indexOf("/") + right.length() + 1);
 
+            if(left == ""){
+                left="0";
+            }
+
+            if(right == ""){
+                right="0";
+            }
+
             operation = (fragmentedLeft + (parseDouble(left) / parseDouble(right)) + fragmentedRight);
         }
         return operation;
@@ -115,6 +178,15 @@ public class Calculer {
 
             fragmentedLeft = operation.substring(0, operation.indexOf("+") - left.length());
             fragmentedRight = operation.substring(operation.indexOf("+") + right.length() + 1);
+
+            if(left == ""){
+                left="0";
+            }
+
+            if(right == ""){
+                right="0";
+            }
+
             operation = (fragmentedLeft + (parseDouble(left) + parseDouble(right)) + fragmentedRight);
         }
         return operation;
@@ -122,19 +194,28 @@ public class Calculer {
 
     public static String  subtraction(String operation){
 
-        while (operation.contains("-")) {
-            String left = extractNumberLeft(operation, "-");
-            String right = extractNumberRight(operation, "-");
+        while (operation.contains("r")) {
+            String left = extractNumberLeft(operation, "r");
+            String right = extractNumberRight(operation, "r");
 
             String fragmentedLeft = "";
             String fragmentedRight = "";
 
-            fragmentedLeft = operation.substring(0, operation.indexOf("-") - left.length());
-            fragmentedRight = operation.substring(operation.indexOf("-") + right.length() + 1);
+            fragmentedLeft = operation.substring(0, operation.indexOf("r") - left.length());
+            fragmentedRight = operation.substring(operation.indexOf("r") + right.length() + 1);
+
+            if(left == ""){
+                left="0";
+            }
+
+            if(right == ""){
+                right="0";
+            }
+
             operation = (fragmentedLeft + (parseDouble(left) - parseDouble(right)) + fragmentedRight);
 
         }
-        return format(operation);
+        return operation;
     }
 
     public static String extractNumberLeft(String operation, String parameter){
@@ -142,12 +223,12 @@ public class Calculer {
         String number="";
 
         for(int a = operationExtract.length()-1; a >= 0; a-- ){
-            if((Character.isDigit(operationExtract.charAt(a))) || (operationExtract.charAt(a) == '.')){
+            if((Character.isDigit(operationExtract.charAt(a))) || (operationExtract.charAt(a) == '.') || (operationExtract.charAt(a) == '-')){
 
                 number = operationExtract.charAt(a)+number;
             }
 
-            if(!Character.isDigit(operationExtract.charAt(a)) && (operationExtract.charAt(a) != '.')) {
+            if(!Character.isDigit(operationExtract.charAt(a)) && (operationExtract.charAt(a) != '.') && (operationExtract.charAt(a) != '-') ) {
                break;
             }
         }
@@ -169,6 +250,31 @@ public class Calculer {
             }
         }
         return number;
+    }
+
+    public static String obtenerEcuacion(String operation){
+        String cadena="";
+        String number="";
+
+        cadena = operation.substring(0,operation.length()-extractOperationRight(operation,")").length()-1);
+
+        for(int a = cadena.length()-1; a >= 0; a-- ){
+            if (operation.charAt(a) == '('){
+                break;
+            }
+            number = cadena.charAt(a)+number;;
+        }
+        return number;
+    }
+
+    public static String extractOperationLeft(String operation, String parameter){
+        String operationExtract = operation.substring(0,operation.lastIndexOf(parameter));
+        return operationExtract;
+    }
+
+    public static String extractOperationRight(String operation, String parameter){
+        String operationExtract = operation.substring(operation.indexOf(parameter)+1);
+        return operationExtract;
     }
 
     public String toString() {
