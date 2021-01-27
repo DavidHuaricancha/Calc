@@ -2,17 +2,17 @@ package example.models;
 
 import static java.lang.Double.*;
 
-public class Calculer {
+public class CalcV1 {
 
     private String screen;
     private String result;
 
-    public Calculer(){
+    public CalcV1(){
         result="0";
         screen="";
     }
 
-    public Calculer(String result, String scren) {
+    public CalcV1(String result, String scren) {
         this.result = result;
         this.screen = scren;
     }
@@ -33,17 +33,17 @@ public class Calculer {
         this.screen = screen;
     }
 
-    public static Calculer insertScreen(String screen){
+    public static CalcV1 insertScreen(String screen){
 
-        Calculer calculer= new Calculer();
+        CalcV1 calcV1 = new CalcV1();
 
-        calculer.setScreen(screen);
+        calcV1.setScreen(screen);
 
-        return  calculer;
+        return calcV1;
     }
 
     public void ejecutarChangeSign(){
-        Calculer cal = new Calculer();
+        CalcV1 cal = new CalcV1();
         cal.setScreen(getScreen());
         cal.ejecutarEquation();
         Double num = Double.valueOf(cal.getResult());
@@ -55,7 +55,7 @@ public class Calculer {
     public void  ejecutarPercentage(String percentage){
 
 
-        Calculer cal = new Calculer();
+        CalcV1 cal = new CalcV1();
         cal.setScreen(getScreen());
         cal.ejecutarEquation();
         Double num=0D;
@@ -186,7 +186,7 @@ public class Calculer {
             if(right == ""){
                 right="0";
             }
-
+            System.out.println((fragmentedLeft +"_"+left +"_"+ parseDouble(right)+"_"+ fragmentedRight));
             operation = (fragmentedLeft + (parseDouble(left) + parseDouble(right)) + fragmentedRight);
         }
         return operation;

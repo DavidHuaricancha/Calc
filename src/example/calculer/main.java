@@ -1,14 +1,28 @@
 package example.calculer;
 
-import example.controllers.CCalculer;
-import example.models.Calculer;
+import example.models.Calc;
+import example.models.CalcV1;
+import example.models.CalcV2;
+import javax.script.*;
 
 public class main {
     public static void main(String[] args) {
-        Calculer c = CCalculer.insertScreen("(5-10)");
-//        c.ejecutarPercentage("20");//Metodo para porcentaje
-//        c.ejecutarChangeSign();//Metodo para cambio de signo
-//        c.ejecutarEquation();//Metodo para ejecutar cualquier ecuacion de este formato: ((4+3.6)+5)*89*(45-2)
+
+/*        ScriptEngineManager mgr = new ScriptEngineManager();
+        ScriptEngine engine = mgr.getEngineByName("JavaScript");
+        String res = "0.2+0.8-0.20479999999999998+0.0221184-9.437184000000002E-4+1.34217728E-5";
+        try {
+            System.out.println(engine.eval(res));
+        } catch (ScriptException e) {
+            e.printStackTrace();
+        }*/
+
+        Calc c = Calc.insertScreen("0.2+(25*0.192)-(200*0.192^2)+(675*0.192^3)-(900*0.192^4)+(400*0.192^5)");
+        c.resolveEquation();
         System.out.println(c);
+
+
+
+
     }
 }
